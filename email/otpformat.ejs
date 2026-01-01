@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your OTP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .otp-card {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .otp {
+      font-size: 32px;
+      font-weight: bold;
+      letter-spacing: 6px;
+      margin-top: 15px;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="otp-card">
+    <h2>Your OTP</h2>
+
+    <div class="otp">
+      <%= otp %>
+    </div>
+
+    <p>This OTP is valid for a limited time.</p>
+  </div>
+
+</body>
+</html>
