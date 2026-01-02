@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const userController = require('../controller/usercontroller');
-const isAuthenticated=require('../middleware/isAuthenticated');
+const isAuthenticated = require('../middleware/isAuthenticated');
 const registerValidator = require('../validator/registerValidator');
 router.post('/register', registerValidator, userController.postRegister);
 router.post('/verify', userController.varifyUser);
@@ -10,4 +10,6 @@ router.post('/logout', isAuthenticated, userController.postLogout);
 router.post('/forgetPassword', userController.forgetPassword);
 router.post('/varifyOtp/:email', userController.varifyOtp);
 router.post('/resetPassword/:email', userController.resetPassword);
+router.post('/check-verification', userController.checkVerificationStatus);
+router.post('/resend-verification', userController.resendVerificationEmail);
 module.exports = router;
